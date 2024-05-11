@@ -25,7 +25,6 @@ export class Tab2Page {
     const error:any = document.getElementById('error')
 
     const body = {
-
       "title": notesTitle.value,
       "notes": notesNote.value
 
