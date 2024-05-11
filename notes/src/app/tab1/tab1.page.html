@@ -1,0 +1,44 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+    <app-header></app-header>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <section class="containerAll">
+
+      <div class="containerItems">
+
+
+      
+               <h1>NOTES</h1>  
+
+
+    
+     @for (dataa of data; track dataa) {
+
+
+            <h1 class="noteTitle" id="noteTitle">{{dataa.title}}</h1>
+
+            <p class="noteNOte" id="noteNote">{{dataa.notes}}</p>
+
+
+}
+
+       
+
+
+        
+        
+      </div>
+  
+
+    </section>
+
+</ion-content>
