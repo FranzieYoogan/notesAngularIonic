@@ -42,6 +42,25 @@ export class Tab2Page {
     } else {
 
       error.innerHTML = "ERROR"
+      error.style.transition = "1s"
+
+      setTimeout(() => {
+
+        error.style.marginLeft = "1em"
+
+      }, 300);
+
+      setTimeout(() => {
+        
+        error.style.marginLeft = "0em"
+
+      }, 600);
+
+      setTimeout(() => {
+
+        window.location.reload()
+
+      }, 900);
 
     }
 
