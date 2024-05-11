@@ -9,6 +9,7 @@
 input {
 
     border: 1px solid black;
+  
 
 }
 
@@ -16,5 +17,30 @@ input {
 
     width: 100%;
     margin-top: 1em;
+    background-color: #2ee6a8;
+    transition: 1s;
+    font-weight: 900;
+}
+
+.buttonStyle:hover {
+
+    transform: scale(1.2);
+    background-color: #2ee6a8;
+
+}
+
+.containerItems {
+    display: flex;
+    justify-content: center;
+   
+
+}
+
+.formStyle {
+
+    width: 80%;
+    box-shadow: 0px 0px 4px 0px black;
+    padding: 20px;
+    border-radius: 10px;
 
 }
