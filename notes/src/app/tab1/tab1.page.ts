@@ -22,6 +22,7 @@ export class Tab1Page implements OnInit {
         
         const noteTitle:any = document.getElementById('noteTitle')
         const noteNote: any = document.getElementById('noteNote')
+        const id: any = document.getElementById('id')
 
         this.http.get('http://localhost:3000/notes').subscribe(response => {
 
@@ -38,12 +39,13 @@ export class Tab1Page implements OnInit {
 
         const noteTitle:any = document.getElementById('noteTitle')
         const noteNote: any = document.getElementById('noteNote')
+        const id: any = document.getElementById('id')
 
         if(noteTitle.innerHTML == this.data[0]['title'] && noteNote.innerHTML == this.data[0]['notes']) {
 
      
   
-          this.http.delete(`http://localhost:3000/notes/${this.data[0]['id']}`).subscribe(() => {
+          this.http.delete(`http://localhost:3000/notes/${id.innerHTML}`).subscribe(() => {
           
           window.location.reload()
 
