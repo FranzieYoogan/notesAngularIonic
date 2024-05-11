@@ -21,18 +21,23 @@ export class TabsPage implements OnInit {
     
     const labelStyle:any = document.getElementById('labelStyle')
     const labelStyle2:any = document.getElementById('labelStyle2')
+    const createIcon:any = document.getElementById('createIcon')
+    const allIcon:any = document.getElementById('allIcon')
 
      if(window.location.href == "http://localhost:8100/tabs/tab1") {
 
      labelStyle.style.color = "#2ee6a8"
      labelStyle2.style.color = "black"
-
+     allIcon.src = "/assets/icon/notesTab2.svg"
+     createIcon.src = "/assets/icon/createNote.svg"
      } 
     
      if(window.location.href == "http://localhost:8100/tabs/tab2") {
 
      labelStyle2.style.color = "#2ee6a8"
      labelStyle.style.color = "black"
+     createIcon.src = "/assets/icon/createNote2.svg"
+     allIcon.src = "/assets/icon/notesTab.svg"
 
     }
 
@@ -42,16 +47,24 @@ export class TabsPage implements OnInit {
   createNote2() {
     const labelStyle2:any = document.getElementById('labelStyle2')
     const labelStyle:any = document.getElementById('labelStyle')
+    const createIcon:any = document.getElementById('createIcon')
+    const allIcon:any = document.getElementById('allIcon')
 
+    createIcon.src = "/assets/icon/createNote2.svg"
+    allIcon.src = "/assets/icon/notesTab.svg"
     labelStyle2.style.color = "#2ee6a8"
     labelStyle.style.color = "black"
 
   }
 
     allNotes() {
+    const createIcon:any = document.getElementById('createIcon')
+    const allIcon:any = document.getElementById('allIcon')
     const labelStyle2:any = document.getElementById('labelStyle2')
     const labelStyle:any = document.getElementById('labelStyle')
 
+    allIcon.src = "/assets/icon/notesTab2.svg"
+    createIcon.src = "/assets/icon/createNote.svg"
     labelStyle.style.color = "#2ee6a8"
     labelStyle2.style.color = "black"
 
