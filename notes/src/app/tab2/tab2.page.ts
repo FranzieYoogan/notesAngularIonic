@@ -22,6 +22,7 @@ export class Tab2Page {
 
     const notesTitle:any = document.getElementById('notesTitle')
     const notesNote:any = document.getElementById('notesNote')
+    const error:any = document.getElementById('error')
 
     const body = {
 
@@ -31,9 +32,21 @@ export class Tab2Page {
       
     }
 
-    this.http.post('http://localhost:3000/notes', body).subscribe(response => {
-      console.log('Updated config:', response);
-    });
+    if(notesTitle.value != "" && notesNote.value != "") {
+
+      this.http.post('http://localhost:3000/notes', body).subscribe(response => {
+        console.log('Updated config:', response);
+      });
+
+     window.location.reload()
+
+    } else {
+
+      error.innerHTML = "ERROR"
+
+    }
+
+ 
 
     
   }

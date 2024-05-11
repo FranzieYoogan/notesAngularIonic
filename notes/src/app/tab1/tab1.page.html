@@ -24,8 +24,8 @@
      @for (dataa of data; track dataa) {
 
         <div class="containerItems2">
-          
-      
+
+            <img (click)="delete()" class="deleteIcon" src="/assets/icon/delete.png" alt="">
             <h1 class="noteTitle" id="noteTitle">{{dataa.title}}</h1>
 
             <p class="noteNOte" id="noteNote">{{dataa.notes}}</p>

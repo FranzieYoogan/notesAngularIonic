@@ -34,5 +34,25 @@ export class Tab1Page implements OnInit {
 
       }
 
+      delete() {
+
+        const noteTitle:any = document.getElementById('noteTitle')
+        const noteNote: any = document.getElementById('noteNote')
+
+        if(noteTitle.innerHTML == this.data[0]['title'] && noteNote.innerHTML == this.data[0]['notes']) {
+
+     
+  
+          this.http.delete(`http://localhost:3000/notes/${this.data[0]['id']}`).subscribe(() => {
+          
+          window.location.reload()
+
+          });
+        }
+
+     
+
+      }
+
 
 }
